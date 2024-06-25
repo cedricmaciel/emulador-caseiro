@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emulator</title>
+    <link href="emulator.css" rel="stylesheet" type="text/css" media="screen">
+</head>
+<body>
+
+    <div class="phone-frame">
+        <iframe id="emulator" src="" frameborder="0"></iframe>
+    </div>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const url = params.get('url');
+        if (url) {
+            document.getElementById('emulator').src = url;
+        }
+    </script>
+    
+</body>
+</html>
